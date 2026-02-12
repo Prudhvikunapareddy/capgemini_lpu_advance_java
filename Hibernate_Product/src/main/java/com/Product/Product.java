@@ -6,7 +6,12 @@ import javax.persistence.Id;
 @Entity
 public class Product {
 
-    @Id
+    @Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+	}
+
+	@Id
     private int id;
     private String name;
     private double price;

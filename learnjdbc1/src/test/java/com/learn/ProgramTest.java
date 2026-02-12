@@ -38,10 +38,5 @@ public class ProgramTest {
 		assertEquals(expected,actualres);
 	}
 	}
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/Prudhvikunapareddy/capgemini_lpu_advance_java.git
-git push -u origin main
+
 
