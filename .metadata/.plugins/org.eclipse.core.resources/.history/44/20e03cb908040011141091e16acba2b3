@@ -1,0 +1,16 @@
+package com.prac;
+
+public class Calculator {
+	public static void add(int a,int b) {
+		System.out.print(a+b);
+	}
+	public static String reverseString(String data) {
+		String rev = "";
+		for(int i =data.length()-2;i>=0;i--) {
+			rev = rev+data.charAt(i);
+		}
+		return rev;
+		
+	}
+
+}

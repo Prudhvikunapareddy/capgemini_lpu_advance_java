@@ -1,0 +1,49 @@
+package com.prac;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.Test;
+
+public class CalculatorTest {
+	public void addTest() {
+		int res = Calculator.add(20,30);
+		
+	}
+	//@Test
+	public void reverseTest() {
+	String actualres=Calculator.reverseString("data");
+	assertEquals("atad",actualres);
+	}
+	
+	public void reverseTestNull() {
+		String actualres=Calculator.reverseString(null);
+		assertEquals("llun",actualres);
+
+	}
+	//@Test
+	public void factTest() {
+		int res = Calculator.fac(5);
+		assertEquals(120,res);
+	}
+	//@Test
+	public void palindrometest() {
+		boolean res =  Calculator.palindrome(121);
+		assertEquals(true,res);
+	}
+	@Test
+	public void AgeTest() {
+		Employee e =  new Employee(10,"Allen",20,"CSE");
+		assertTrue(e.isAge());
+		
+		
+	}
+	@Test
+	public void testValidName() {
+		Employee e =  new Employee(10,"A6llen",20,"CSE");
+		assertFalse(e.isValidName(null));
+	
+	}
+	}
+

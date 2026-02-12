@@ -1,0 +1,42 @@
+package com.connectdatabase;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+public class StepstoConnectDatabase {
+	
+public static void main(String[] args) {
+	// Load the driver class
+	String url = "jdbc:postgresql://localhost:5432/school";
+	String un ="postgres";
+	String pwd = "root";
+	try {
+		Class.forName("org.postgresql.Driver");
+		
+		// to Establish conncetion
+		
+		Connection connect = DriverManager.getConnection(url,un,pwd);
+		String sql = "insert into student values(1,'Miller','miler@gmail.com','male')";
+		String sqlu = "update student set student_name= 'abhiram' where student_name = 'Miller'";
+		String sqld = "delete from student where id = 1001";
+		String sqli = "insert into student values(2,'prudhvi','prudhvi@gmail.com','male')";
+		
+		//create stmt
+		Statement stmt = connect.createStatement();
+		
+		//execute query
+		
+		stmt.execute(sqli);
+		
+		//close the connection
+		connect.close();
+		System.out.println("data inserted");
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+}

@@ -1,0 +1,47 @@
+package com.learn;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
+import com.parameterized.EvenOrOdd;
+import com.parameterized.Program;
+
+public class ProgramTest {
+
+//	@ParameterizedTest
+//	@ValueSource(strings = {"tenet","radar","aba"})
+	public void isPalindrome(String str) {
+		Program p =new Program();
+		assertTrue(p.isPalindrome(str));
+	}
+//	@ParameterizedTest
+	/*@CsvSource({
+		"1,2,3",
+		"5,5,10",
+		"5,3,8"
+	})*/
+	public void addTest(int a,int b,int expectedResult) {
+		Program p = new Program();
+		int actualres = p.add(a, b);
+		assertEquals(expectedResult,actualres);
+	}
+	@ParameterizedTest
+	@CsvFileSource(resources = "/capgemini.csv",numLinesToSkip = 1)
+	public void evenoroddTest(String input,String expected) {
+		EvenOrOdd eoo = new EvenOrOdd();
+		String actualres = eoo.evenOrodd(Integer.parseInt(input));
+		assertEquals(expected,actualres);
+	}
+	}
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Prudhvikunapareddy/capgemini_lpu_advance_java.git
+git push -u origin main
+
