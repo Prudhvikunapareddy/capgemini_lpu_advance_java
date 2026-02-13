@@ -2,6 +2,7 @@ package com.onetoonemapping;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Car {
@@ -16,6 +17,8 @@ public class Car {
 		return "Car [id=" + id + ", brand=" + brand + ", model=" + model + ", modelYear=" + modelYear + ", price="
 				+ price + "]";
 	}
+	
+	@OneToOne
 	private Engine engine;
 	public int getId() {
 		return id;
@@ -40,6 +43,12 @@ public class Car {
 	}
 	public void setModelYear(String modelYear) {
 		this.modelYear = modelYear;
+	}
+	public Engine getEngine() {
+		return engine;
+	}
+	public void setEngine(Engine engine) {
+		this.engine = engine;
 	}
 	public double getPrice() {
 		return price;
