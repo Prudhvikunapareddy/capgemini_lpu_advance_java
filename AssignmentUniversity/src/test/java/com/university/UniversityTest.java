@@ -103,8 +103,7 @@ public class UniversityTest {
         List<Enrollment> enrollments =
                 enrollmentDAO.findByCourse(201);
 
-        assertEquals("A",
-                enrollments.get(0).getGrade());
+        assertEquals("A",enrollments.get(0).getGrade());
     }
 
     @Test
