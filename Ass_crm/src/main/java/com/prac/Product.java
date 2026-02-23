@@ -2,38 +2,36 @@ package com.prac;
 
 
 
+
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
 
 @Entity
 public class Product {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private double price;
 
-    public Product(){}
+    @ManyToMany(mappedBy = "products")
+    private List<Order> orders;
 
-    public Long getId(){
-    	return id; 
-    	}
-    public void setId(Long id){
-    	this.id = id; 
-    	}
+    public Product() {}
 
-    public String getName(){
-    	return name; 
-    	}
-    public void setName(String name){
-    	this.name = name; 
-    	}
+    public Long getId() { return id; }
 
-    public double getPrice(){ 
-    	return price; 
-    	}
-    public void setPrice(double price){ 
-    	this.price = price;
-    	}
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public double getPrice() { return price; }
+    public void setPrice(double price) { this.price = price; }
 }
