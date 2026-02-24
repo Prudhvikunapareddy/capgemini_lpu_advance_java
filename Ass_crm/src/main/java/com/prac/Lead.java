@@ -23,19 +23,39 @@ public class Lead {
     @JoinColumn(name = "employee_id")
     private SalesEmployee employee;
 
-    public Lead() {}
+    public Lead() {
+    	
+    }
 
-    public Long getId() { return id; }
+    public Long getId() {
+    	return id;
+    	}
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public String getName() { 
+    	return name; 
+    	}
+    public void setName(String name) { 
+    	this.name = name;
+    	}
 
-    public String getSource() { return source; }
-    public void setSource(String source) { this.source = source; }
+    public String getSource() {
+    	return source;
+    	}
+    public void setSource(String source) { 
+    	this.source = source; 
+    	}
 
-    public String getContactInfo() { return contactInfo; }
-    public void setContactInfo(String contactInfo) { this.contactInfo = contactInfo; }
+    public String getContactInfo() { 
+    	return contactInfo; 
+    	}
+    public void setContactInfo(String contactInfo) {
+    	this.contactInfo = contactInfo;
+    	}
 
-    public SalesEmployee getEmployee() { return employee; }
-    public void setEmployee(SalesEmployee employee) { this.employee = employee; }
+    public SalesEmployee getEmployee() {
+    	return employee; 
+    	}
+    public void setEmployee(SalesEmployee employee) {
+    	this.employee = employee; 
+    	}
 }
