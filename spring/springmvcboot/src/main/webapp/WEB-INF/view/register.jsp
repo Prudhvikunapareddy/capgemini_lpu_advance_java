@@ -59,20 +59,23 @@
 <div class="container">
     <h2>User Registration</h2>
 
-    <form action="create-account" method="post">
+    <form action="/create-account" method="post">
 
-        <label>Name</label>
-        <input type="text" name="name" placeholder="Enter your name" required>
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Enter your name" required>
 
-        <label>Email</label>
-        <input type="email" name="email" placeholder="Enter your email" required>
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Enter your email" required>
 
-        <label>Contact</label>
-        <input type="tel" name="contact" placeholder="Enter your contact number" required>
+    <label>Contact</label>
+    <input type="tel" name="contact" placeholder="Enter your contact number" required>
 
-        <input type="submit" value="Register">
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Enter password" required>
 
-    </form>
+    <input type="submit" value="Register">
+
+</form>
 </div>
 
 </body>
