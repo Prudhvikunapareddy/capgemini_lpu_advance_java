@@ -1,1 +1,8 @@
-/.metadata/
+target/
+.metadata/
+.settings/
+.classpath
+.project
+*.log
+*.class
+.mvn/
